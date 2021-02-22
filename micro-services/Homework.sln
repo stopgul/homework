@@ -1,0 +1,59 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30717.126
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{1D4DEF76-C9BE-445A-91BD-58271EDD6501}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Admin", "Admin", "{0DCF43DE-E5E3-42CD-9995-8DEC37D8E212}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Content", "Content", "{1912DA36-8031-4DB6-BFFD-D0C3F047ACC7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Admin.API", "src\Admin\Admin.API\Admin.API.csproj", "{6BA9C89B-A963-49E2-B09F-CBC4F2D631BC}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{B64BB659-C993-4135-815D-D63B29D12001}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "EventBus", "EventBus", "{8D2AA887-4C34-42BA-A4C2-F90946550449}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EventBusRabbitMQ", "src\EventBus\EventBusRabbitMQ\EventBusRabbitMQ.csproj", "{BAF2F285-33B7-4C62-AA41-2123F2E6EA7D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Content.API", "src\Content\Content.API\Content.API.csproj", "{3CCA9E55-A15B-43B9-A468-80F607785BE4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6BA9C89B-A963-49E2-B09F-CBC4F2D631BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6BA9C89B-A963-49E2-B09F-CBC4F2D631BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6BA9C89B-A963-49E2-B09F-CBC4F2D631BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6BA9C89B-A963-49E2-B09F-CBC4F2D631BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B64BB659-C993-4135-815D-D63B29D12001}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B64BB659-C993-4135-815D-D63B29D12001}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B64BB659-C993-4135-815D-D63B29D12001}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B64BB659-C993-4135-815D-D63B29D12001}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BAF2F285-33B7-4C62-AA41-2123F2E6EA7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BAF2F285-33B7-4C62-AA41-2123F2E6EA7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BAF2F285-33B7-4C62-AA41-2123F2E6EA7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BAF2F285-33B7-4C62-AA41-2123F2E6EA7D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3CCA9E55-A15B-43B9-A468-80F607785BE4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3CCA9E55-A15B-43B9-A468-80F607785BE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3CCA9E55-A15B-43B9-A468-80F607785BE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3CCA9E55-A15B-43B9-A468-80F607785BE4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0DCF43DE-E5E3-42CD-9995-8DEC37D8E212} = {1D4DEF76-C9BE-445A-91BD-58271EDD6501}
+		{1912DA36-8031-4DB6-BFFD-D0C3F047ACC7} = {1D4DEF76-C9BE-445A-91BD-58271EDD6501}
+		{6BA9C89B-A963-49E2-B09F-CBC4F2D631BC} = {0DCF43DE-E5E3-42CD-9995-8DEC37D8E212}
+		{8D2AA887-4C34-42BA-A4C2-F90946550449} = {1D4DEF76-C9BE-445A-91BD-58271EDD6501}
+		{BAF2F285-33B7-4C62-AA41-2123F2E6EA7D} = {8D2AA887-4C34-42BA-A4C2-F90946550449}
+		{3CCA9E55-A15B-43B9-A468-80F607785BE4} = {1912DA36-8031-4DB6-BFFD-D0C3F047ACC7}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D6F0EE90-3B91-4D28-AF23-874E3FF48CF5}
+	EndGlobalSection
+EndGlobal

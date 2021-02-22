@@ -1,0 +1,25 @@
+version: '3.4'
+
+services:
+    contentdb:
+        image: mongo
+
+    rabbitmq:
+        image: rabbitmq:3-management-alpine
+
+    content.api:
+        image: ${DOCKER_REGISTRY-}contentapi
+        build:
+            context: .
+            dockerfile: src/Content/Content.API/Dockerfile
+
+    admin.api:
+        image: ${DOCKER_REGISTRY-}adminapi
+        build:
+            context: .
+            dockerfile: src/Admin/Admin.API/Dockerfile
+
+    
+
+    
+

@@ -1,0 +1,12 @@
+<div class="card h-100 shadow-sm" style="width: 16rem;">
+    <div class="image position-relative" style="cursor: pointer; width: 16rem;">        
+       <img src="{{article.thumbnail}}" alt="{{article.slug}}" class="img-fluid bg-info">      
+   </div> 
+   
+   <div class="card-body d-flex flex-column">
+       <a routerLink="/article/{{article.assetId}}">
+           <h6 class="text-uppercase">{{ (article.slug.length>20)? (article.slug | slice:0:20)+'..':(article.slug) }}</h6>
+       </a>
+       <!-- <span class="mb-2">{{ (article.slug.length>30)? (article.slug | slice:0:30)+'..':(article.slug) }}</span> -->       
+   </div> 
+</div>

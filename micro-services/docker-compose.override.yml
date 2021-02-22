@@ -1,0 +1,55 @@
+version: '3.4'
+
+services:
+    contentdb:
+        container_name: contentdb
+        restart: always
+        volumes:
+            #- ${WEBAPP_STORAGE_HOME}/site:/data/db
+            - ./data:/data/db
+        ports:
+            - "27017:27017"
+
+    rabbitmq:
+        container_name: rabbitmq
+        restart: always
+        ports:
+            - "5672:5672"
+            - "15672:15672"
+
+    content.api:
+        container_name: contentapi
+        restart: always
+        environment:
+            - ASPNETCORE_ENVIRONMENT=Development
+            #- ASPNETCORE_URLS=https://+:443;http://+:80
+            - "ContentDatabaseSettings:ConnectionString=mongodb://contentdb:27017"
+            - "EventBus:HostName=rabbitmq"
+        depends_on:
+            - contentdb 
+            - rabbitmq
+        ports:
+            - "8000:80"
+            #- "443"
+        volumes:
+            #- ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro
+            - ${HOME}/.microsoft/usersecrets/:/root/.microsoft/usersecrets
+            - ${HOME}/.aspnet/https:/root/.aspnet/https/
+
+    admin.api:
+        container_name: adminapi
+        environment:
+            - ASPNETCORE_ENVIRONMENT=Development
+            #- ASPNETCORE_URLS=https://+:443;http://+:80
+            - "EventBus:HostName=rabbitmq"
+        depends_on:
+            - rabbitmq
+        ports:
+          - "8001:80"
+          #- "443"
+        volumes:
+          - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
+          - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro
+
+    
+    
